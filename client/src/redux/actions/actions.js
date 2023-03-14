@@ -15,7 +15,7 @@ import {
 export function getAllDogs() {
   return async function (dispatch) {
     try {
-      const res = await axios.get("http://localhost:3001/dogs/");
+      const res = await axios.get("/dogs/");
       dispatch({ type: GET_ALL_DOGS, payload: res.data });
     } catch (err) {
       return err;
@@ -30,7 +30,7 @@ export function getAllDogs() {
 export function searchByName(name) {
   return async function (dispatch) {
     try {
-      const res = await axios.get(`http://localhost:3001/dogs?name=${name}`);
+      const res = await axios.get(`/dogs?name=${name}`);
       dispatch({ type: SEARCH_BY_NAME, payload: res.data });
     } catch (err) {
       return err;
@@ -45,7 +45,7 @@ export function searchByName(name) {
 export function getDogDetail(id) {
   return async function (dispatch) {
     try {
-      const res = await axios.get(`http://localhost:3001/dogs/${id}`);
+      const res = await axios.get(`/dogs/${id}`);
       dispatch({ type: GET_DOG_DETAILS, payload: res.data });
     } catch (error) {
       console.error(new Error(error));
@@ -59,7 +59,7 @@ export function getDogDetail(id) {
 export function getTemperaments() {
   return function (dispatch) {
     axios
-      .get(`http://localhost:3001/temperaments`)
+      .get(`/temperaments`)
       .then((res) => {
         dispatch({ type: GET_TEMPERAMENTS, payload: res.data });
       })
