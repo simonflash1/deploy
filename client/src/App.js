@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { Landing, Home, Details, Create, About } from "./pages-view"
 import axios from "axios"
 
-axios.defaults.baseURL = 'http://localhost:3001/'
+axios.defaults.baseURL = 'https://deploy-production-1c1e.up.railway.app//'
 
 function App() {
   return (
