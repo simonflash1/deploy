@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+body {
+  background-image: url(./assets/Dogs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
