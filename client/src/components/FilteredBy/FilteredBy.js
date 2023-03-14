@@ -40,7 +40,7 @@ export const FilteredBy = () => {
             <select className="selectCont" onChange={handleTemperaments} name="temperaments">
                 <option className="option" value="default">TEMPERAMENTOS...</option>
                 <optgroup className="optionGroup" label="Temperaments" >
-                    {temperaments && temperaments.map(t => <option value={t}>{t}</option>)}
+                    {temperaments && temperaments.map(t => <option key={temperaments.id} value={t}>{t}</option>)}
                 </optgroup>
             </select>
 

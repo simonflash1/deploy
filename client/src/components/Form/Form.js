@@ -124,7 +124,7 @@ export const Form = () => {
         setErrors(formErrors);
         console.log(errors)
         if (Object.keys(formErrors).length === 0) {
-            axios.post("http://localhost:3001/dogs", form)
+            axios.post("/dogs", form)
                 .then(res => alert(res))
                 .catch(error => console.log(error.message))
         }
@@ -172,7 +172,7 @@ export const Form = () => {
                     <label>Temperamentos: </label>
                     <select multiple defaultValue={form.temperaments} onChange={changeHandlerArray} name="temperaments">
                         {temperament?.map(temperament => (
-                            <option value={temperament.name}>
+                            <option key={temperament.id} value={temperament.name}>
                                 {temperament}
                             </option>
                         ))}
